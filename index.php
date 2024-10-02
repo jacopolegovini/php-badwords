@@ -10,7 +10,7 @@
     <title>Bad Words</title>
 </head>
 <body>
-    <form action="bad_words.php" method="POST">
+    <form action="bad_words.php" method="GET">
         <input type="text" name="words" placeholder="Inserisci una parola">
         <input type="text" name="bad_word" placeholder="Inserisci la parola da censurare">
         <button>Invia</button>
