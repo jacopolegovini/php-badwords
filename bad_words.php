@@ -15,7 +15,14 @@
     <title>Bad Words</title>
 </head>
 <body>
-    <p>Hai scritto "<?php echo $word; ?>" ed è lunga "<?php echo strlen($word) ?>"</p>
-    <p>Questo è quanto è rimasto dopo la censura "<?php echo $censored; ?>"</p>
+    <div>
+        <h3>Senza censura (lunga: "<?php echo strlen($word) ?>"):</h3>
+        <p><?php echo $word; ?></p>
+    </div>
+    <hr>
+    <div>
+        <h3>Con censura (lunga: "<?php echo strlen($word) ?>"):</h3>
+        <p><?php echo $censored; ?></p>
+    </div>
 </body>
 </html>
