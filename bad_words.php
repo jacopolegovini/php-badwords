@@ -1,3 +1,11 @@
+<?php 
+    $word = $_POST["words"];
+    $words = explode(" ", $word);
+    var_dump($words);
+    // $words_length = count($words);
+    // echo $words_length;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +14,7 @@
     <title>Bad Words</title>
 </head>
 <body>
-    <p>Questo è quanto hai scritto <?php echo $_POST["word"]; ?></p>
+    <p>Hai scritto "<?php echo $word; ?>" e questo è quanto è lungo "<?php echo strlen($word) ?>"</p>
     <p>Questo è quanto hai scritto con la censura <?php echo $_POST["bad_word"]; ?></p>
 </body>
 </html>
