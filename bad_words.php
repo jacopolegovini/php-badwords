@@ -1,9 +1,9 @@
 <?php 
     $word = $_POST["words"];
-    $words = explode(" ", $word);
+    $words_array = explode(" ", $word);
 
     $bad_word = $_POST['bad_word'];
-    $censored_array = str_replace($bad_word, '***', $words);
+    $censored_array = str_replace($bad_word, '***', $words_array);
     $censored = implode(' ', $censored_array);
 ?>
 
@@ -15,7 +15,7 @@
     <title>Bad Words</title>
 </head>
 <body>
-    <p>Hai scritto "<?php echo $word; ?>" e questo è quanto è lungo "<?php echo strlen($word) ?>"</p>
-    <p>Questo è quanto hai scritto con la censura "<?php echo $censored; ?>"</p>
+    <p>Hai scritto "<?php echo $word; ?>" ed è lunga "<?php echo strlen($word) ?>"</p>
+    <p>Questo è quanto è rimasto dopo la censura "<?php echo $censored; ?>"</p>
 </body>
 </html>
